@@ -1,8 +1,5 @@
 import re
-
-def edit_contact():
-    global contact_list
-    pattern = r'^\+?\d{1,3}?[-.\s]?(\(?\d{1,4}?\)?[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$'
+def edit_contact(contact_list, pattern):
     contact_name = input("Enter name of contact you want to edit: ").title()
     if contact_name in contact_list:
         contact_phone = input("Enter new phone number: ")

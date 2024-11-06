@@ -1,3 +1,4 @@
+import re
 from adding_contacts import *
 from search_contacts import *
 from deleting_contact import *
@@ -6,9 +7,9 @@ from display_all import *
 from exporting_contacts import *
 from importing_contacts import *
 
-contact_list = {}
 pattern = r'^\+?\d{1,3}?[-.\s]?(\(?\d{1,4}?\)?[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$'
 
+contact_list = {}
 print("Welcome to the Contact Management System!")
 
 while True:
@@ -25,19 +26,21 @@ while True:
         continue
 
     if user_choice == 1:
-        add_contacts()
+        add_contacts(contact_list, pattern)
     elif user_choice == 2:
-        edit_contact()
+        edit_contact(contact_list, pattern)
     elif user_choice == 3:
-        delete_contact()
+        delete_contact(contact_list)
     elif user_choice == 4:
-        search_contact()
+        search_contact(contact_list)
     elif user_choice == 5:
-        display_all_contacts()
+        display_all_contacts(contact_list)
     elif user_choice == 6:
-        export_contacts()
+        export_contacts(contact_list)
     elif user_choice == 7:
-        import_contacts()
+        import_contacts(contact_list)
     elif user_choice == 8:
         print("Thank you for using the Contact Management System.\nGoodbye!")
         break
+    else:
+        print("Unkown Error")

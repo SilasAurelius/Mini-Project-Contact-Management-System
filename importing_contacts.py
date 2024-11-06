@@ -1,5 +1,4 @@
-def import_contacts():
-    global contact_list
+def import_contacts(contact_list):
     filename = input("Enter the filename to import contacts: ")
     try:
         with open(filename, 'r') as file:

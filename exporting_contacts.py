@@ -1,5 +1,4 @@
-def export_contacts():
-    global contact_list
+def export_contacts(contact_list):
     filename = input("Enter the filename to export contacts: ")
     with open(filename, 'w') as file:
         for name, details in contact_list.items():

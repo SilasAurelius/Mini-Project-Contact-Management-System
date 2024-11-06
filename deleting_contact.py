@@ -1,5 +1,4 @@
-def delete_contact():
-    global contact_list
+def delete_contact(contact_list):
     name = input("Enter the name of the contact you want to delete: ").title()
     if name in contact_list:
         del contact_list[name]

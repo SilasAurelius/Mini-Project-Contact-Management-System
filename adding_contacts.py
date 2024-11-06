@@ -1,7 +1,5 @@
-
-def add_contacts():
-    import re
-    pattern = r'^\+?\d{1,3}?[-.\s]?(\(?\d{1,4}?\)?[-.\s]?)?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$'
+import re
+def add_contacts(contact_list, pattern):
     contact_name = input("Enter full name: ").title()
     contact_phone = input("Enter phone number: ")
     if re.match(pattern, contact_phone):

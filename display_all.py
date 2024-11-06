@@ -1,5 +1,4 @@
-def display_all_contacts():
-    global contact_list
+def display_all_contacts(contact_list):
     if not contact_list:
         print("No contacts found.")
     else:
