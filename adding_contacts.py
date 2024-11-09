@@ -1,7 +1,7 @@
 import re
 def add_contacts(contact_list, pattern):
     contact_name = input("Enter full name: ").title()
-    contact_phone = input("Enter phone number: ")
+    contact_phone = int(input("Enter phone number: "))
     if re.match(pattern, contact_phone):
         print(f"{contact_phone}: Valid phone number.")
     else:
